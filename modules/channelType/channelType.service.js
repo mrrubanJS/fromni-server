@@ -14,6 +14,14 @@ class ChannelTypeService{
                 throw error
             }
     }
+    async get(){
+        try {
+            const channels = await channelTypeCRUD.get()
+            return channels
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 

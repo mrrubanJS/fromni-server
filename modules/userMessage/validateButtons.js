@@ -1,7 +1,7 @@
 import { ErrorResponse } from '../../core/utils/errorResponse.js';
 export function validateButtons(buttonsArr, limitsObj) {
   const arrOfStandart = buttonsArr.filter((item) => !item.inline);
-  const arrOfInline = buttonsArr.filter((item) => !item.inline);
+  const arrOfInline = buttonsArr.filter((item) => item.inline);
   const arrOfStandartLink = buttonsArr.filter((item) => item.link && !item.inline);
   const arrOfInlineLink = buttonsArr.filter((item) => item.link && item.inline);
    

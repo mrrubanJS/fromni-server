@@ -18,6 +18,17 @@ class ChannelTypeController{
                 next(error)
             }
     }
+    async get(req, res, next){
+        try {
+            const channels = await channelTypeService.get()
+            res.status(201).json({
+                success:true,
+                channels
+            })
+        } catch (error) {
+            next(error)
+        }
+    }
 }
 
 
